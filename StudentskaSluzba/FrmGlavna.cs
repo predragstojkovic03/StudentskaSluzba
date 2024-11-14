@@ -34,5 +34,12 @@ namespace StudentskaSluzba
             new FrmNewProfessor(_user).ShowDialog();
             Visible = true;
         }
+
+        private void noviPredmetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            new FrmNewSubject().ShowDialog();
+            Visible = true;
+        }
     }
 }

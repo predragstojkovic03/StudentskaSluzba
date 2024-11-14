@@ -3,34 +3,8 @@ using Microsoft.Data.SqlClient;
 
 namespace DAL
 {
-    public class UsersManager
+    public class UsersManager : AbstractManager
     {
-        private SqlConnection _sqlConnection;
-
-
-        public UsersManager()
-        {
-            _sqlConnection = new SqlConnection(@"
-                Data Source=Predrag\SQLEXPRESS;
-                Initial Catalog=StudentskaSluzba;
-                Integrated Security=True;
-                Connect Timeout=30;
-                Encrypt=True;
-                Trust Server Certificate=True;
-                Application Intent=ReadWrite;
-                Multi Subnet Failover=False");
-        }
-
-        private void Connect()
-        {
-            _sqlConnection.Open();
-        }
-
-        private void Disconnect()
-        {
-            _sqlConnection.Close(); 
-        }
-
         public User FindUserByEmail(string email)
         {
             string upit = $"select id, firstname, lastname, email, password from [user] where email=@email";

@@ -32,7 +32,6 @@
             profesorToolStripMenuItem = new ToolStripMenuItem();
             noviProfesorToolStripMenuItem = new ToolStripMenuItem();
             predmetiToolStripMenuItem = new ToolStripMenuItem();
-            prikaziPredmeteToolStripMenuItem = new ToolStripMenuItem();
             noviPredmetToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -58,28 +57,23 @@
             // noviProfesorToolStripMenuItem
             // 
             noviProfesorToolStripMenuItem.Name = "noviProfesorToolStripMenuItem";
-            noviProfesorToolStripMenuItem.Size = new Size(224, 26);
+            noviProfesorToolStripMenuItem.Size = new Size(183, 26);
             noviProfesorToolStripMenuItem.Text = "Novi profesor";
             noviProfesorToolStripMenuItem.Click += noviProfesorToolStripMenuItem_Click;
             // 
             // predmetiToolStripMenuItem
             // 
-            predmetiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { prikaziPredmeteToolStripMenuItem, noviPredmetToolStripMenuItem });
+            predmetiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { noviPredmetToolStripMenuItem });
             predmetiToolStripMenuItem.Name = "predmetiToolStripMenuItem";
             predmetiToolStripMenuItem.Size = new Size(83, 24);
             predmetiToolStripMenuItem.Text = "Predmeti";
-            // 
-            // prikaziPredmeteToolStripMenuItem
-            // 
-            prikaziPredmeteToolStripMenuItem.Name = "prikaziPredmeteToolStripMenuItem";
-            prikaziPredmeteToolStripMenuItem.Size = new Size(224, 26);
-            prikaziPredmeteToolStripMenuItem.Text = "Prikazi predmete";
             // 
             // noviPredmetToolStripMenuItem
             // 
             noviPredmetToolStripMenuItem.Name = "noviPredmetToolStripMenuItem";
             noviPredmetToolStripMenuItem.Size = new Size(224, 26);
             noviPredmetToolStripMenuItem.Text = "Novi predmet";
+            noviPredmetToolStripMenuItem.Click += noviPredmetToolStripMenuItem_Click;
             // 
             // FrmGlavna
             // 
@@ -102,7 +96,6 @@
         private ToolStripMenuItem profesorToolStripMenuItem;
         private ToolStripMenuItem noviProfesorToolStripMenuItem;
         private ToolStripMenuItem predmetiToolStripMenuItem;
-        private ToolStripMenuItem prikaziPredmeteToolStripMenuItem;
         private ToolStripMenuItem noviPredmetToolStripMenuItem;
     }
 }

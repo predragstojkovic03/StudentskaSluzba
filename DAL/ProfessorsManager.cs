@@ -9,33 +9,8 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class ProfessorsManager
+    public class ProfessorsManager : AbstractManager
     {
-        private SqlConnection _sqlConnection;
-
-        public ProfessorsManager()
-        {
-            _sqlConnection = new SqlConnection(@"
-                Data Source=Predrag\SQLEXPRESS;
-                Initial Catalog=StudentskaSluzba;
-                Integrated Security=True;
-                Connect Timeout=30;
-                Encrypt=True;
-                Trust Server Certificate=True;
-                Application Intent=ReadWrite;
-                Multi Subnet Failover=False");
-        }
-
-        private void Connect()
-        {
-            _sqlConnection.Open();
-        }
-
-        private void Disconnect()
-        {
-            _sqlConnection.Close();
-        }
-
         public Professor CreateProfessor(string firstName, string lastName, ProfessorTitle title, string userEmail)
         {
             try
@@ -64,9 +39,9 @@ namespace DAL
             }
         }
 
-        public BindingList<Professor> FindAll()
+        public List<Professor> FindAll()
         {
-            var professors = new BindingList<Professor>();
+            var professors = new List<Professor>();
             try
             {
                 Connect();

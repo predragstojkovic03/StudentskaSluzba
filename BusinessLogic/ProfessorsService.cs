@@ -23,7 +23,7 @@ namespace BusinessLogic
             return _professorsManager.CreateProfessor(firstName, lastName, title, email);
         }
 
-        public BindingList<Professor> FindAll()
+        public List<Professor> FindAll()
         {
             return _professorsManager.FindAll();
         }

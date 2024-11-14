@@ -45,6 +45,7 @@
             dgvProfessors.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProfessors.Location = new Point(274, 12);
             dgvProfessors.Name = "dgvProfessors";
+            dgvProfessors.ReadOnly = true;
             dgvProfessors.RowHeadersWidth = 51;
             dgvProfessors.Size = new Size(548, 536);
             dgvProfessors.TabIndex = 0;
@@ -122,7 +123,7 @@
             Controls.Add(label1);
             Controls.Add(dgvProfessors);
             Name = "FrmNewProfessor";
-            Text = "FrmNewProfessor";
+            Text = "Unesi profesora";
             ((System.ComponentModel.ISupportInitialize)dgvProfessors).EndInit();
             ResumeLayout(false);
             PerformLayout();
